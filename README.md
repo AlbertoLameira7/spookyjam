@@ -11,6 +11,24 @@ main features:
   - Dialogue system (read notes, interact with objects)
   - Some puzzles
    
+   
+<h2>Walk and load new scene<h2>
 
 ![](walk_door.gif)
 
+New scene on load needs transition effect   
+
+
+<h2>Flashlight version 1<h2>
+
+![](flashlight.gif)
+
+Future versions of the light mechanics will allow the player to control the flashlight direction, it will point to where the cursor is.
+
+
+<h1>Aim and Shoot version 1</h2>
+
+![](shoot_aim.gif)
+
+This version of the shooting and aiming is more proof of concept, future versions will allow the user to control the direction
+of the gun and light, it will point to where the cursor is.
