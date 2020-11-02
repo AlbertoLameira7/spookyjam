@@ -12,14 +12,14 @@ main features:
   - Some puzzles
    
    
-<h2>Walk and load new scene<h2>
+<h2>Walk and load new scene</h2>
 
 ![](walk_door.gif)
 
 <p>New scene on load needs transition effect</p>
 
 
-<h2>Flashlight version 1<h2>
+<h2>Flashlight version 1</h2>
 
 ![](flashlight.gif)
 
