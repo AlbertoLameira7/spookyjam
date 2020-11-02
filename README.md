@@ -12,5 +12,5 @@ main features:
   - Some puzzles
    
 
-
+![](walk_door.gif)
 
