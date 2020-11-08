@@ -16,7 +16,7 @@ public class Door : MonoBehaviour
         if (other.tag == "Player")
         {
             _interactReference =  Instantiate(_interactable, new Vector2(transform.position.x, transform.position.y + _interactableYOffset), Quaternion.identity, transform);
-            other.GetComponent<Player>()._canUseDoor = true;
+            other.GetComponent<NS_Player.Player>()._canUseDoor = true;
             NS_GameManager.GameManager._doorSceneToLoad = _sceneToLoad;
             Debug.Log("Show text");
         }
@@ -26,7 +26,7 @@ public class Door : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<Player>()._canUseDoor = false;
+            other.GetComponent<NS_Player.Player>()._canUseDoor = false;
             NS_GameManager.GameManager._doorSceneToLoad = null;
             Destroy(_interactReference);
         }

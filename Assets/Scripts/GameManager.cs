@@ -14,19 +14,47 @@ namespace NS_GameManager
         [SerializeField]
         private GameObject _cameraRef;
         static private CinemachineVirtualCamera _cameraComponent;
-        public static GameManager _gameManagerStatic;
-        public static int? _doorSceneToLoad; // nullable int to avoid having 0 as default, because 0 is also a scene, so to avoid a possible wrong scene load, use null as default instead.
+        static public GameManager _gameManagerStatic;
+        static public int? _doorSceneToLoad; // nullable int to avoid having 0 as default, because 0 is also a scene, so to avoid a possible wrong scene load, use null as default instead.
+        static private NS_UIManager.UIManager _UI;
 
         // Start is called before the first frame update
         void Start()
         {
             // TODO: Load default Camera settings from file
             _gameManagerStatic = gameObject.GetComponent<GameManager>();
+
+            _UI = GameObject.Find("UI").GetComponent<NS_UIManager.UIManager>();
+
+            if (_UI == null)
+            {
+                Debug.Log("UI Not found!");
+                return;
+            }
         }
 
         public void SetPlayerRef(GameObject playerRef)
         {
             _playRef = playerRef;
+
+            if (playerRef == null)
+            {
+                Debug.Log("No Player!");
+                return;
+            }
+
+            _UI.SetTextAmmoLoaded(playerRef.GetComponent<NS_Player.Player>().GetAmmoLoaded());
+            _UI.SetTextAmmoTotal(playerRef.GetComponent<NS_Player.Player>().GetAmmoTotal());
+        }
+
+        static public void UIUpdateAmmoLoaded(int ammoLoaded)
+        {
+            _UI.SetTextAmmoLoaded(ammoLoaded);
+        }
+
+        static public void UIUpdateAmmoTotal(int ammoTotal)
+        {
+            _UI.SetTextAmmoTotal(ammoTotal);
         }
 
         public void SetCameraRef(GameObject camerRef)
