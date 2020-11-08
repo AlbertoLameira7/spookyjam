@@ -32,3 +32,10 @@ main features:
 
 <p>This version of the shooting and aiming is more proof of concept, future versions will allow the user to control the direction
 of the gun and light, it will point to where the cursor is.</p>
+
+
+<h2>Reload System</h2>
+
+![](reload.gif)
+
+<p>Works for any magazine size, easy to implement additional weapons, or weapon magazine upgrade</p>
